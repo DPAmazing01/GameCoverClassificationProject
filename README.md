@@ -1,5 +1,4 @@
-# Team49-Predicting-video-game-genres-from-covers
-Predicting Video Game Genres From Video Game Covers
+(Project was worked on from March-April 2026 in a team of 3, where I worked on defining the custom ResNet18 model and the training/testing loop on the custom model)
 
 ## Project Overview
 
@@ -18,9 +17,9 @@ The high element-wise accuracy is due to severe class imbalance. The model perfo
 The dataset is **Steam Games 2025**, available on Kaggle:  
 [Steam Games Dataset 2025](https://www.kaggle.com/datasets/artermiloff/steam-games-dataset)
 
-Because the full dataset (CSV + downloaded cover images) is huge, it is not included in this repository.
+In particular, the `games_march2025_cleaned.csv` file from the Kaggle dataset was used, and the notebook extracts the images contained in the CSV file into a folder called `steam_images`. 
 
-## Model Architecture
+## Model Architecture 
 
 A custom ResNet-18 implemented from scratch (no pretrained weights).
 
@@ -30,7 +29,7 @@ A custom ResNet-18 implemented from scratch (no pretrained weights).
 - Multi-label outputs trained with Binary Cross-Entropy with Logits loss.
 - Adam optimizer (lr=1e-4), batch size 8.
 
-During training, the model state is saved whenever validation loss improves (`best_resnet18_steam.pth` - again too huge to include).
+During training, the model state is saved whenever validation loss improves to `best_resnet18_steam.pth`.
 
 ## Evaluation
 
@@ -44,4 +43,4 @@ All metrics are reported in the notebook.
 
 ## Credits
 
-Developed by Team 49 as part of a course project. The Steam Games 2025 dataset is maintained by Artermiloff on Kaggle. The GameNet-1 model provided baseline motivation.
+The Steam Games 2025 dataset is maintained by Artermiloff on Kaggle. The GameNet-1 model provided baseline motivation (Link to the baseline model: https://huggingface.co/MAS-AI-0000/GameNet-1).
